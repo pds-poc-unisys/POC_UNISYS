@@ -26,7 +26,7 @@
 		    <version>2.0</version>
 		    <configuration>
 		        <deploymentType>cloudhub</deploymentType>
-		        <muleVersion>3.8.1</muleVersion>               <!-- This is the runtime version as it appears on the CloudHub interface -->
+		        <muleVersion>3.8.3</muleVersion>               <!-- This is the runtime version as it appears on the CloudHub interface -->
 		        <username>jagadishkoppula95</username>
 		        <password>J@gadish95</password>
 		        <environment>Production</environment>
@@ -127,7 +127,7 @@
 		<dependency>
 		    <groupId>org.mule</groupId>
 		    <artifactId>mule-core</artifactId>
-		    <version>3.8.1</version>
+		    <version>3.8.3</version>
 		</dependency>
 		
 		<dependency>
