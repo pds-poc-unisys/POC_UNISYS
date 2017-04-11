@@ -20,6 +20,28 @@
 
 	<build>
 		<plugins>
+		<plugin>
+		    <groupId>org.mule.tools.maven</groupId>
+		    <artifactId>mule-maven-plugin</artifactId>
+		    <version>2.0</version>
+		    <configuration>
+		        <deploymentType>cloudhub</deploymentType>
+		        <muleVersion>3.8.1</muleVersion>               <!-- This is the runtime version as it appears on the CloudHub interface -->
+		        <username>jagadishkoppula95</username>
+		        <password>J@gadish95</password>
+		        <environment>Production</environment>
+		    </configuration>
+		    <executions>
+		        <execution>
+		            <id>deploy</id>
+		            <phase>deploy</phase>
+		            <goals>
+		                <goal>deploy</goal>
+		            </goals>
+		        </execution>
+		    </executions>
+			</plugin>
+		
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
@@ -27,6 +49,15 @@
 				<extensions>true</extensions>
 				<configuration>
                     <copyToAppsDirectory>true</copyToAppsDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>project</descriptorRef>
+					</descriptorRefs>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -89,9 +120,16 @@
         </testResources>
     </build>
 
-	
+	<!-- Mule Dependencies -->
 	<dependencies>
 		<!-- Xml configuration -->
+		
+		<dependency>
+		    <groupId>org.mule</groupId>
+		    <artifactId>mule-core</artifactId>
+		    <version>3.8.1</version>
+		</dependency>
+		
 		<dependency>
         	<groupId>com.mulesoft.muleesb</groupId>
 			<artifactId>mule-core-ee</artifactId>
