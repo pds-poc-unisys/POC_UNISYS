@@ -89,11 +89,7 @@
         </testResources>
     </build>
 
-<<<<<<< HEAD
 	
-=======
-	<!-- Mule Dependencies -->
->>>>>>> refs/remotes/origin/master
 	<dependencies>
 		<!-- Xml configuration -->
 		<dependency>
